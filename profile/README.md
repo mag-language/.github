@@ -4,7 +4,7 @@
 
 Mag is a dynamic, object-oriented language with patterns, classes and multiple dispatch.
 
-This is what a simple (and very inefficient) fibonacci function looks like in Mag:
+We'll now demonstrate a core feature of the Mag language by defining a Fibonacci function using multimethods:
 
 ```python
 def fib(0) 0
@@ -12,7 +12,7 @@ def fib(1) 1
 def fib(n Int) fib(n - 2) + fib(n - 1)
 ```
 
-The three definitions generate a selection of methods with the same name, but different arguments.
+As you can see, there are three method definitions with different arguments which share the same name. When the method named `fib` is called, the appropriate method body is chosen at runtime so that `fib(0)` returns `0`, `fib(1)` returns `1` and `fib(n)` returns the Fibonacci number for any other input by calling itself recursively and calculating the result.
 
 ## Credits
 
